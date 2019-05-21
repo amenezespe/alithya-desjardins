@@ -1,0 +1,11 @@
+La deuxième question, sur la correction du code pour obtenir le test idempotent, j’ai quelques doutes sur la question,  
+mais voici  si j’ai bien compris le but : (j'ai trouvé qu'elle n'est pas une question pratique).  
+
+On peut retirer la ligne suivante e vérifier juste si la réponse est OK. Parce que, en utilisant cette façon on peut tester n’importe quelle jour. 
+
+Le code resterait comme ça : 
+
+this.mockMvc.perform(get("/time/current")).andDo(print()).andExpect(status().isOk());
+
+On doit supprimer la ligne suivante.
+.andExpect(jsonPath("$").value("2018-01-16T00:00:00.000-05:00"));
