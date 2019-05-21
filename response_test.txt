@@ -1,5 +1,6 @@
 La deuxième question, sur la correction du code pour obtenir le test idempotent, j’ai quelques doutes sur la question,  
 mais voici  si j’ai bien compris le but : (j'ai trouvé qu'elle n'est pas une question pratique).  
+Parce qu'on peut également mocker le service, mais il n'y a pas de sens, si on mock pour donner un resultat toujours 2018-01-16... c'est la meme chose;
 
 On peut retirer la ligne suivante e vérifier juste si la réponse est OK. Parce que, en utilisant cette façon on peut tester n’importe quelle jour. 
 
