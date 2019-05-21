@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
@@ -31,7 +30,7 @@ public class OutilsControlleur {
     @Autowired
     private NumeroOutil serviceNumero;
 
-    @RequestMapping(value="/stringDedup", method= RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value="/stringDedup", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity getFilterTrierString(@ChaineValide @RequestParam(value = "value") String chaine)  {
 
